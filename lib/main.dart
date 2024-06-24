@@ -1,10 +1,11 @@
 import 'package:attendance_app/screens/login_page.dart';
 import 'package:attendance_app/screens/home_page.dart';
 import 'package:attendance_app/screens/registration.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:get/get.dart';
+import 'dart:io';
 
 Future<void> main() async {
   // i have made profilepage and the registrtain page
@@ -16,7 +17,8 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
 
-  const MyApp({super.key});
+	final cameras = await availableCameras();
+  const MyApp({super.key, required this.cameras});
   @override
   Widget build(BuildContext context) {
     const String initialRoute = "/register";
