@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import 'package:attendance_app/screens/capturepic.dart';
-import 'package:camera/camera.dart';
->>>>>>> eadbc33 (added capture image functionality for registration)
 import 'package:flutter/material.dart';
 
 
@@ -17,14 +11,8 @@ class RegistrationPage extends StatefulWidget {
   RegistrationPageState createState() => RegistrationPageState();
 }
 
-<<<<<<< HEAD
 class RegistrationPageState extends State<RegistrationPage>{
   // final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-=======
-class RegistrationPageState extends State<RegistrationPage> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
->>>>>>> eadbc33 (added capture image functionality for registration)
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _ageController = TextEditingController();
   final TextEditingController _positionController = TextEditingController();
@@ -32,20 +20,12 @@ class RegistrationPageState extends State<RegistrationPage> {
   final TextEditingController _employeeIdController = TextEditingController();
 
  void _nextPage() {
-<<<<<<< HEAD
     Navigator.pushNamed(context, '/login');
     // if (_formKey.currentState?.validate() ?? false) {
     //   Navigator.of(context).push(
     //     MaterialPageRoute(builder: (context) =>CapturePicPage(cameras:widget.cameras)),
     //   );
     // }
-=======
-    if (_formKey.currentState?.validate() ?? false) {
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) =>CapturePicPage(cameras:widget.cameras)),
-      );
-    }
->>>>>>> eadbc33 (added capture image functionality for registration)
   }
 
   void _submit() {
@@ -56,7 +36,6 @@ class RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       backgroundColor: Colors.white,
       // appBar: AppBar(
       //   title: const Text(
@@ -294,67 +273,6 @@ class RegistrationPageState extends State<RegistrationPage> {
 
                   
               ],
-=======
-      appBar: AppBar(
-        title: const Text(
-          'Registration',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.grey[850],
-      ),
-      body:
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Form(
-              key: _formKey,
-              child: ListView(
-                children: [
-                  TextFormField(
-                    controller: _employeeIdController,
-                    decoration: const InputDecoration(labelText: 'Employee ID'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your Employee ID';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: _nameController,
-                    decoration: const InputDecoration(labelText: 'Name'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your Name';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: _ageController,
-                    decoration: const InputDecoration(labelText: 'Age'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your Age';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: _positionController,
-                    decoration: const InputDecoration(labelText: 'Position'),
-                  ),
-                  TextFormField(
-                    controller: _bloodGroupController,
-                    decoration: const InputDecoration(labelText: 'Blood Group'),
-                  ),
-                  const SizedBox(height: 24),
-                  ElevatedButton(
-                    onPressed: _nextPage,
-                    child: const Text('Next'),
-                  ),
-                ],
-              ),
->>>>>>> eadbc33 (added capture image functionality for registration)
             ),
           ),
     );
